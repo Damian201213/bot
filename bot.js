@@ -1,8 +1,18 @@
+// === Importy i konfiguracja ===
 const { Client, GatewayIntentBits, REST, Routes, SlashCommandBuilder } = require('discord.js');
 require('dotenv').config();
+const express = require('express');
 
+// === Uptime Pinger / Express ===
+const app = express();
+app.get('/', (req, res) => res.send('Bot działa!'));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Keepalive listening on ${port}`));
+
+// === Tworzenie klienta Discord ===
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
+// === Dane dropu i cooldown ===
 const DROP_CHANNEL_ID = process.env.DROP_CHANNEL_ID || '1428466122432315472';
 const cooldowns = new Map();
 const COOLDOWN_TIME = 60 * 60 * 1000; // 1 godzina
@@ -25,7 +35,7 @@ function losujDrop(table) {
   return '💀 Nic...';
 }
 
-// Rejestracja komendy /drop
+// === Rejestracja komendy /drop ===
 const commands = [
   new SlashCommandBuilder()
     .setName('drop')
@@ -47,12 +57,13 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
   }
 })();
 
+// === Obsługa interakcji /drop ===
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
   if (interaction.commandName === 'drop') {
 
     if (interaction.channelId !== DROP_CHANNEL_ID) {
-      return interaction.reply({ content: `❌ Komenda /drop może być używana tylko na <#${1428466122432315472}>!`, ephemeral: true });
+      return interaction.reply({ content: `❌ Komenda /drop może być używana tylko na <#${DROP_CHANNEL_ID}>!`, ephemeral: true });
     }
 
     const userId = interaction.user.id;
@@ -77,19 +88,9 @@ client.on('interactionCreate', async (interaction) => {
   }
 });
 
-client.once('clientReady', () => {
+// === Login bota ===
+client.once('ready', () => {
   console.log(`✅ Zalogowano jako ${client.user.tag}`);
 });
 
 client.login(process.env.TOKEN);
-
-// na początku index.js (jeśli używasz discord.js)
-import express from 'express';
-// ... reszta importów discord.js
-
-const app = express();
-app.get('/', (req, res) => res.send('OK'));
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Keepalive listening on ${port}`));
-
-// dalej twój client.login(process.env.TOKEN)
