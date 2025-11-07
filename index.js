@@ -55,7 +55,7 @@ client.on('messageCreate', async (message) => {
   else if (cmd === 'rules') {
     const embed = new EmbedBuilder()
       .setTitle('📜 The Rules')
-      .setColor(#1DB954)
+      .setColor(#'1DB954')
       .setDescription(
         `• No Spamming & Rioting\n` +
         `• No Harassing & Abusing Others\n` +
@@ -84,5 +84,6 @@ client.on('messageCreate', async (message) => {
 });
 
 client.login(process.env.BOT_TOKEN);
+
 
 
