@@ -37,7 +37,7 @@ client.on('messageCreate', async (message) => {
         `${NO_EMOJI}  = **No**\n\n` +
         `- Saying **No** **without proof** will get you **banned within 24 hours!** unless evidence provided.`
       )
-      .setColor(0x1DB954)
+      .setColor('0x1DB954')
       .setTimestamp()
       .setFooter({ text: 'DonutSMP MarketPlace' });
 
@@ -84,3 +84,4 @@ client.on('messageCreate', async (message) => {
 });
 
 client.login(process.env.BOT_TOKEN);
+
