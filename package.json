@@ -1,1 +1,19 @@
 
+{
+  "name": "donutsmp-bot",
+  "version": "1.0.0",
+  "description": "Discord bot with !are and !rules commands",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Twoje Imię lub Nick",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.0.0",
+    "dotenv": "^16.0.0"
+  },
+  "engines": {
+    "node": ">=16.9.0"
+  }
+}
