@@ -51,74 +51,94 @@ client.on('messageCreate', async (message) => {
     }
   }
 
-    # 🎯・**PAID ADVERTISEMENTS**
+  if (cmd === 'buy') {
+    const embedMain = new EmbedBuilder()
+      .setTitle('🎯・PAID ADVERTISEMENTS')
+      .setDescription(
+        '> 📢 **Advertise YOUR Server on DonutSMP Marketplace!**\n' +
+        '> Reach an audience of **5,000+ active users** and grow your community fast!'
+      )
+      .setColor(0x1DB954);
 
-> 📢 **Advertise YOUR Server on DonutSmp | Market!**  
-> Reach an audience of **5,000+ active users** and grow your community fast!  
+    const embedPrices = new EmbedBuilder()
+      .setTitle('💲・PRICES')
+      .setDescription(
+        '✨ **@everyone Ping** — **€10**\n' +
+        '⚡ **<@&1436495546415059044>** — **€7**\n' +
+        '📣 **@here Ping** — **€5**'
+      )
+      .setColor(0x1DB954);
 
----
+    const embedAddons = new EmbedBuilder()
+      .setTitle('🧩・ADD-ONS')
+      .setDescription(
+        '💎 *Boost your results with Nitro Giveaways!*\n' +
+        'Users **must** join your server to claim prizes — expect up to **3× more joins!**\n\n' +
+        '🎁 **Nitro Premium Giveaway** — **+€11 (2 days)** or **+€20 (7 days)**\n' +
+        '🎉 **Nitro Basic Giveaway** — **+€3 (2 days)** or **+€5 (7 days)**\n' +
+        '📢 **Your Own Channel** — **+€5 (2 days)** or **+€7 (7 days)** *(Maximum reach!)*'
+      )
+      .setColor(0x1DB954);
 
-## 💲 ・**PRICES**
+    const embedPackages = new EmbedBuilder()
+      .setTitle('⚙️・PACKAGES (DISCOUNTED BUNDLES)')
+      .setDescription(
+        '### 🪙・**IRON PACKAGE** — *25% OFF*\n' +
+        '✅ Your own channel *(recommended!)*\n' +
+        '📈 Maximized reach\n' +
+        '🔔 3× **@here Pings** *(12h cooldown each)*\n' +
+        '💵 **Price:** **€15** *(~25% OFF)*\n\n' +
 
-✨ **@everyone Ping** — **€10**  
-⚡ **<@1436495546415059044> ** — **€7**  
-📣 **@here Ping** — **€5**
+        '### 🥇・**GOLD PACKAGE** — *35% OFF*\n' +
+        '✅ Your own channel *(recommended!)*\n' +
+        '📈 Maximized reach\n' +
+        '🔔 3× **@everyone Pings** *(24h cooldown each)*\n' +
+        '💵 **Price:** **€25** *(~35% OFF)*\n\n' +
 
----
+        '### 💎・**DIAMOND PACKAGE** — *28% OFF*\n' +
+        '✅ Your own channel *(recommended!)*\n' +
+        '📈 Maximized reach\n' +
+        '🎉 Nitro Premium Giveaway (7D)\n' +
+        '🔔 2× **@everyone Pings** *(24h cooldown each)*\n' +
+        '🔔 2× **@here Pings** *(12h cooldown each)*\n' +
+        '⚡ 1× **<@&1393989726456909864>**\n' +
+        '💵 **Price:** **€50** *(~28% OFF)*'
+      )
+      .setColor(0x1DB954);
 
-## 🧩・**ADD-ONS**
+    const embedPurchase = new EmbedBuilder()
+      .setTitle('🛒・HOW TO PURCHASE')
+      .setDescription(
+        'Open a ticket in <#1436492497437069352>\n' +
+        '> 💬 *Wait for me to respond before sending payment — do **NOT** pay other staff.*'
+      )
+      .setColor(0x1DB954);
 
-💎 *Boost your results with Nitro Giveaways!*  
-Users **must** join your server to claim prizes — expect up to **3× more joins!**
+    const embedPayment = new EmbedBuilder()
+      .setTitle('💵・ACCEPTED PAYMENT METHODS')
+      .setDescription(
+        '💳 **PayPal (Friends & Family)** or **Venmo**\n' +
+        '-# ALL TRANSACTION FEES MUST BE COVERED BY YOU!\n\n' +
+        '⭐ **Get noticed. Grow faster. Advertise smart — only on DonutSMP | Market!**'
+      )
+      .setColor(0x1DB954)
+      .setFooter({ text: 'DonutSMP Market • Advertisement System' })
+      .setTimestamp();
 
-🎁 **Nitro Premium Giveaway** — **+€11 (2 days)** or **+€20 (7 days)**
-🎉 **Nitro Basic Giveaway** — **+€3 (2 days)** or **+€5 (7 days)**
-📢 **Your Own Channel** — **+€5 (2 days)** or **+€7 (7 days)** *(Maximum reach!)*
-
----
-
-## ⚙️・**__PACKAGES (DISCOUNTED BUNDLES)__**
-
-### 🪙・**IRON PACKAGE** — *25% OFF*
-✅ Your own channel *(recommended!)*  
-📈 Maximized reach
-🔔 3× **@here Pings** *(12h cooldown each)*  
-💵 **Price:** **€15** *(~25% OFF)*
-
----
-
-### 🥇・**GOLD PACKAGE** — *35% OFF*
-✅ Your own channel *(recommended!)*  
-📈 Maximized reach  
-🔔 3× **@everyone Pings** *(24h cooldown each)*  
-💵 **Price:** **€25** *(~35% OFF)*
-
----
-
-### 💎・**DIAMOND PACKAGE** — *28% OFF*
-✅ Your own channel *(recommended!)*  
-📈 Maximized reach
-🎉 Nitro Premium Giveaway (7D)
-🔔 2× **@everyone Pings** *(24h cooldown each)*  
-🔔 2× **@here Pings**  *(12h cooldown each)*  
-⚡ 1× **<@1436495546415059044> **  
-💵 **Price:** **€50** *(~28% OFF)*
-
----
-
-## 🛒・**HOW TO PURCHASE**
-
-Open a ticket in <#1436492497437069352>  
-> 💬 *Wait for me to respond before sending payment — do **NOT** pay other staff.*
-
----
-
-## 💵・**ACCEPTED PAYMENT METHODS**
-💳 **PayPal (Friends & Family) or Venmo**
--# ALL TRANSACTION FEES MUST BE COVERED BY YOU!
----
-
-⭐ **Get noticed. Grow faster. Advertise smart — only on DonutSmp | Market!**
+    try {
+      await message.channel.send({ embeds: [
+        embedMain,
+        embedPrices,
+        embedAddons,
+        embedPackages,
+        embedPurchase,
+        embedPayment
+      ]});
+    } catch (err) {
+      console.error('Błąd przy wysyłaniu komendy !buy:', err);
+      message.channel.send('❌ Wystąpił błąd przy wysyłaniu komendy.');
+    }
+  }
 
     // === !rules ===
   else if (cmd === 'rules') {
@@ -153,6 +173,7 @@ Open a ticket in <#1436492497437069352>
 });
 
 client.login(process.env.BOT_TOKEN);
+
 
 
 
