@@ -14,8 +14,8 @@ const client = new Client({
 const PREFIX = '!';
 
 // 🔹 Twoje emoji
-const YES_EMOJI = '<:yes:>';
-const NO_EMOJI  = '<:no:>';
+const YES_EMOJI = '<:1436500904974221392:>';
+const NO_EMOJI  = '<:1436500852532580542:>';
 
 client.once('ready', () => {
   console.log(`✅ Zalogowano jako ${client.user.tag}`);
@@ -84,6 +84,7 @@ client.on('messageCreate', async (message) => {
 });
 
 client.login(process.env.BOT_TOKEN);
+
 
 
 
