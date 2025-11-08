@@ -101,7 +101,7 @@ client.on('messageCreate', async (message) => {
         '🎉 Nitro Premium Giveaway (7D)\n' +
         '🔔 2× **@everyone Pings** *(24h cooldown each)*\n' +
         '🔔 2× **@here Pings** *(12h cooldown each)*\n' +
-        '⚡ 1× **<@&1393989726456909864>**\n' +
+        '⚡ 1× **<@1436495546415059044>**\n' +
         '💵 **Price:** **€50** *(~28% OFF)*'
       )
       .setColor(0x1DB954);
@@ -173,6 +173,7 @@ client.on('messageCreate', async (message) => {
 });
 
 client.login(process.env.BOT_TOKEN);
+
 
 
 
