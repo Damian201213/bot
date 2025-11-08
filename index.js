@@ -51,7 +51,76 @@ client.on('messageCreate', async (message) => {
     }
   }
 
-  // === !rules ===
+  !buy # 🎯・**PAID ADVERTISEMENTS**
+
+> 📢 **Advertise YOUR Server on DonutSmp | Market!**  
+> Reach an audience of **5,000+ active users** and grow your community fast!  
+
+---
+
+## 💲 ・**PRICES**
+
+✨ **@everyone Ping** — **€10**  
+⚡ **<@1436495546415059044> ** — **€7**  
+📣 **@here Ping** — **€5**
+
+---
+
+## 🧩・**ADD-ONS**
+
+💎 *Boost your results with Nitro Giveaways!*  
+Users **must** join your server to claim prizes — expect up to **3× more joins!**
+
+🎁 **Nitro Premium Giveaway** — **+€11 (2 days)** or **+€20 (7 days)**
+🎉 **Nitro Basic Giveaway** — **+€3 (2 days)** or **+€5 (7 days)**
+📢 **Your Own Channel** — **+€5 (2 days)** or **+€7 (7 days)** *(Maximum reach!)*
+
+---
+
+## ⚙️・**__PACKAGES (DISCOUNTED BUNDLES)__**
+
+### 🪙・**IRON PACKAGE** — *25% OFF*
+✅ Your own channel *(recommended!)*  
+📈 Maximized reach
+🔔 3× **@here Pings** *(12h cooldown each)*  
+💵 **Price:** **€15** *(~25% OFF)*
+
+---
+
+### 🥇・**GOLD PACKAGE** — *35% OFF*
+✅ Your own channel *(recommended!)*  
+📈 Maximized reach  
+🔔 3× **@everyone Pings** *(24h cooldown each)*  
+💵 **Price:** **€25** *(~35% OFF)*
+
+---
+
+### 💎・**DIAMOND PACKAGE** — *28% OFF*
+✅ Your own channel *(recommended!)*  
+📈 Maximized reach
+🎉 Nitro Premium Giveaway (7D)
+🔔 2× **@everyone Pings** *(24h cooldown each)*  
+🔔 2× **@here Pings**  *(12h cooldown each)*  
+⚡ 1× **<@1436495546415059044> **  
+💵 **Price:** **€50** *(~28% OFF)*
+
+---
+
+## 🛒・**HOW TO PURCHASE**
+
+Open a ticket in <#1436492497437069352>  
+> 💬 *Wait for me to respond before sending payment — do **NOT** pay other staff.*
+
+---
+
+## 💵・**ACCEPTED PAYMENT METHODS**
+💳 **PayPal (Friends & Family) or Venmo**
+-# ALL TRANSACTION FEES MUST BE COVERED BY YOU!
+---
+
+⭐ **Get noticed. Grow faster. Advertise smart — only on DonutSmp | Market!**
+
+    // === !rules ===
   else if (cmd === 'rules') {
     const embed = new EmbedBuilder()
       .setTitle('📜 The Rules')
@@ -84,6 +153,7 @@ client.on('messageCreate', async (message) => {
 });
 
 client.login(process.env.BOT_TOKEN);
+
 
 
 
