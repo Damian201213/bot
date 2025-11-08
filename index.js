@@ -51,7 +51,7 @@ client.on('messageCreate', async (message) => {
     }
   }
 
-  !buy # 🎯・**PAID ADVERTISEMENTS**
+    # 🎯・**PAID ADVERTISEMENTS**
 
 > 📢 **Advertise YOUR Server on DonutSmp | Market!**  
 > Reach an audience of **5,000+ active users** and grow your community fast!  
@@ -153,6 +153,7 @@ Open a ticket in <#1436492497437069352>
 });
 
 client.login(process.env.BOT_TOKEN);
+
 
 
 
