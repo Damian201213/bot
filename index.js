@@ -29,6 +29,7 @@ client.on('messageCreate', async (message) => {
   const cmd = args.shift().toLowerCase();
 
    // === !our ===
+  }
   else if (cmd === "our") {
     const embed = new EmbedBuilder()
       .setTitle("3 BILLION ENDING SOON!")
@@ -181,6 +182,7 @@ Edited Message will result in no partnership
   }
 
     // === !rules ===
+  }
   else if (cmd === 'rules') {
     const embed = new EmbedBuilder()
       .setTitle('📜 The Rules')
@@ -213,6 +215,7 @@ Edited Message will result in no partnership
 });
 
 client.login(process.env.BOT_TOKEN);
+
 
 
 
