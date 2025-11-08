@@ -28,6 +28,46 @@ client.on('messageCreate', async (message) => {
   const args = message.content.slice(PREFIX.length).trim().split(/\s+/);
   const cmd = args.shift().toLowerCase();
 
+   // === !our ===
+  else if (cmd === "our") {
+    const embed = new EmbedBuilder()
+      .setTitle("3 BILLION ENDING SOON!")
+      .setDescription(
+        "discord.gg/dsmpmarket\n[dsmpmarket.gif](https://discord.gg/kjphM7nZJb)"
+      )
+      .setImage("https://example.com/dsmpmarket.gif") // <- tu możesz wkleić link do swojego gifa
+      .setFooter({ text: "DONUTSMP MARKETPLACE" })
+      .setColor(0x00ff66);
+  
+  // === KOMENDA !partner ===
+  if (cmd === 'partner') {
+    const embed = new EmbedBuilder()
+      .setDescription(`
+## __ᴘᴀʀᴛɴᴇʀꜱʜɪᴘ ʀᴇǫᴜɪʀᴇᴍᴇɴᴛꜱ__ 
+> ### 1 - 2000 ᴍᴇᴍʙᴇʀꜱ
+* *We do not ping*
+* *You ping member/everyone*
+> ### 2000 - 6000 ᴍᴇᴍʙᴇʀꜱ
+* *We ping partnership*
+* *You ping member/everyone*
+> ### 6000 + ᴍᴇᴍʙᴇʀꜱ
+* *We ping here + partnership*
+* *You ping member/everyone*
+## ᴀᴅᴅɪᴛɪᴏɴᴀʟ ʀᴜʟᴇꜱ
+
+> - You must ping in our advertisement.
+> - You must keep our advertisement in the partnership channel for at least **5 minutes**. If you place another ad below it during that time, we will not ping for your server.
+> - Partnership cooldown with pings is **12 hours** (no cooldown if we don’t have to ping).
+
+\`\`\`
+Failure to follow rules will lead to no ping for your server even if you pinged for our ad
+Edited Message will result in no partnership
+\`\`\`
+`)
+      .setColor(0x00ff00) // Zielony
+      .setImage('https://cdn.discordapp.com/attachments/1398689135903899719/1431439813986222140/dsmpmarket.gif?ex=690fe0b6&is=690e8f36&hm=b48768dddc036c2925da4abeef128f12f5ded9ac3637abafa346d693a0c6a29b&') // 🔁 <- Wklej tu link do swojego baneru
+      .setTimestamp();
+
   // === !are ===
   if (cmd === 'are') {
     const embed = new EmbedBuilder()
@@ -173,6 +213,7 @@ client.on('messageCreate', async (message) => {
 });
 
 client.login(process.env.BOT_TOKEN);
+
 
 
 
