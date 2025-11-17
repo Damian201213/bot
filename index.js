@@ -1,3 +1,4 @@
+require("dotenv").config();
 client.on("guildMemberAdd", async (member) => {
   const channelId = process.env.WELCOME_CHANNEL_ID;
   const channel = member.guild.channels.cache.get(channelId);
@@ -23,3 +24,4 @@ client.on("guildMemberAdd", async (member) => {
 
   channel.send({ embeds: [embed], files: [lobbyBanner] });
 });
+
