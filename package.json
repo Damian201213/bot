@@ -1,13 +1,13 @@
 
 {
-  "name": "donutsmp-bot",
+  "name": "Hitmc.pl | Bot",
   "version": "1.0.0",
-  "description": "Discord bot with !are and !rules commands",
+  "description": "Dev - Zy2kl8a4nu0pe4t",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Twoje Imię lub Nick",
+  "author": "Dev - Zy2kl8a4nu0pe4t",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^14.0.0",
@@ -17,3 +17,4 @@
     "node": ">=16.9.0"
   }
 }
+
